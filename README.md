@@ -35,7 +35,7 @@ A simple Python-based port scanner that uses threading and Nmap to scan open por
 3. Run the script and enter the IP address of the host you want to scan:
 
    ```bash
-   python port_scanner.py
+   python port-scanner.py
    
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
