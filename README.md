@@ -19,24 +19,22 @@ A simple Python-based port scanner that uses threading and Nmap to scan open por
 - `nmap` (install via pip)
 - `tqdm` (install via pip)
 
-## Installation
+## Installation & Use
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/port-scanner.git
    cd port-scanner
 
+2. Install the required packages:
+    ```bash
+   pip install termcolor nmap tqdm
 
-## Install the required packages:
-
-bash
-pip install termcolor nmap tqdm
-
-## Usage
+3. Usage
 Run the script and enter the IP address of the host you want to scan:
 
-bash
-python port_scanner.py
+   ```bash
+   python port_scanner.py
 
 
 ## License
