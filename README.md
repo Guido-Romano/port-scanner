@@ -1,4 +1,3 @@
-
 # Port Scanner
 
 A simple Python-based port scanner that uses threading and Nmap to scan open ports and detect services.
@@ -58,4 +57,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 This project was inspired by the need to have a simple yet efficient port scanner using Python.
 
 Special thanks to the developers of the Nmap and `termcolor` libraries.
+
 
