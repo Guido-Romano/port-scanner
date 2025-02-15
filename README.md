@@ -1,6 +1,6 @@
-# Port Scanner
+# Port Scanner for 80 Common Ports - Intensive Internal Network Scanner
 
-A highly aggressive Python-based port scanner designed to quickly and efficiently scan the 100 most common ports using threading and Nmap.
+A highly aggressive Python-based port scanner designed to quickly and efficiently scan the 80 most common ports using threading and Nmap.
 
 ## Features
 
@@ -43,7 +43,7 @@ A highly aggressive Python-based port scanner designed to quickly and efficientl
 
 1. **Input**: The script prompts the user to enter the IP address of the target host.
 2. **Validation**: The IP address is validated to ensure it is in the correct format.
-3. **Aggressive Port Scanning**: The script concurrently scans a list of the 100 most common ports on the host using multiple threads to speed up the process.
+3. **Aggressive Port Scanning**: The script concurrently scans a list of the 80 most common ports on the host using multiple threads to speed up the process.
 4. **Service Detection**: If a port is open, the script uses Nmap to detect the service, version, product, and extra info running on the port.
 5. **HTTP Request**: For common web server ports (80, 443, 8080, 5426), the script sends an HTTP request and prints the response.
 6. **Output**: The script prints the status of each scanned port, including open ports and detected services.
