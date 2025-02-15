@@ -50,6 +50,7 @@
 | 5060-5061  | SIP - Session Initiation Protocol (TLS)    |
 | 5222       | XMPP Client Connection                     |
 | 5400       | HOD - Hexen II World Server                |
+| 5426       | Kerberos                                   |
 | 5432       | PostgreSQL Database System                 |
 | 5500       | VNC Remote Desktop Protocol                |
 | 5800       | VNC Remote Desktop (HTTP)                  |
@@ -61,4 +62,4 @@
 | 8080-8081  | HTTP Proxy (Alternate / Cache)             |
 | 8443       | HTTPS (Alternate)                          |
 | 10000      | Webmin                                     |
-| 5426       | Kerberos                                   |
+
