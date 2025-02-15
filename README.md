@@ -1,4 +1,4 @@
-# Port Scanner for 80 Common Ports - Intensive Internal Network Scanner
+# Intensive Internal 80-Port Scanner
 
 A highly aggressive Python-based port scanner designed to quickly and efficiently scan the 80 most common ports using threading and Nmap.
 
