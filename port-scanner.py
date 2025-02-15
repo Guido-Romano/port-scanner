@@ -22,7 +22,7 @@ def validate_ip(ip_str):
 def scan_port(host, port, open_ports, nm):
     try:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-            sock.settimeout(1.0)
+            sock.settimeout(0.5)
             result = sock.connect_ex((host, port))
             if result == 0:
                 if port not in open_ports:
@@ -32,7 +32,7 @@ def scan_port(host, port, open_ports, nm):
 
                     # Running an Nmap scan on the open port
                     nm.scan(host, str(port),
-                            "-sV --version-intensity 9 --version-all")
+                            "-sS -T5 -A")
                     if port in nm[host]['tcp']:
                         service = nm[host]['tcp'][port]['name']
                         version = nm[host]['tcp'][port]['version']
