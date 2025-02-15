@@ -56,7 +56,8 @@ def scan_port(host, port, open_ports, nm):
                     message = (
                         f"GET / HTTP/1.1\r\n"
                         f"Host: {host} \r\n"
-                        "User-Agent: port-scanner\r\n"
+                        "User-Agent: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\n"
+                        "Accept: text/html\r\n"
                         "Connection: close\r\n\r\n"
                     )
                     sock.sendall(message.encode())
@@ -68,8 +69,13 @@ def scan_port(host, port, open_ports, nm):
                             break
                         chunks.append(chunk)
                     data = b"".join(chunks)
-                    print(colored
-                          (f"Received from port {port}: {data}", "grey"))
+                    
+                    
+                    # Handling error "400 Bad Request" from the server
+                    if b'HTTP/1.1 400 Bad Request' in data:
+                        print(colored(f"Received from port {port}: Bad Request Error", "red"))
+                    else:
+                        print(colored(f"Received from port {port}: {data}", "grey"))
 
     except socket.timeout:
         sys.stdout.write("\n")
@@ -114,9 +120,9 @@ def main():
     # Display scanning progress
     while any(thread.is_alive() for thread in threads):
         for i in range(4):
-            sys.stdout.write(colored(f"\r[*] Still scanning{'.' * i}", "blue"))
+            time.sleep(0.6)
+            sys.stdout.write(colored(f"\r\033[3m[*] Still scanning\033[0m{'.' * i}", "blue"))
             sys.stdout.flush()
-            time.sleep(1)
 
     for thread in threads:
         thread.join()
