@@ -1,6 +1,6 @@
-# Intensive Internal 80-Port Scanner
+# 80-Port Scanner v1.0
 
-A highly aggressive Python-based port scanner designed to quickly and efficiently scan the 80 most common ports using threading and Nmap.
+Internal Python-based port scanner designed to quickly and efficiently scan the 80 most common ports using threading and Nmap.
 
 ## Features
 
@@ -23,13 +23,13 @@ A highly aggressive Python-based port scanner designed to quickly and efficientl
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/your-username/port-scanner.git
+    git clone https://github.com/Guido-Romano/port-scanner
     cd port-scanner
     ```
 
 2. **Install the required packages**:
 
-    ### Debian-based distributions (e.g., Ubuntu)
+    ### Debian-based distributions (e.g., Kali)
 
     ```bash
     sudo apt-get update
@@ -37,7 +37,7 @@ A highly aggressive Python-based port scanner designed to quickly and efficientl
     pip3 install termcolor
     ```
 
-    ### Arch-based distributions (e.g., Manjaro)
+    ### Arch-based distributions (e.g., BlackArch)
 
     ```bash
     sudo pacman -Syu
@@ -45,13 +45,6 @@ A highly aggressive Python-based port scanner designed to quickly and efficientl
     pip install termcolor
     ```
 
-    ### Fedora-based distributions
-
-    ```bash
-    sudo dnf update
-    sudo dnf install python3 python3-pip nmap
-    pip3 install termcolor
-    ```
 
 3. **Run the script and enter the IP address of the host you want to scan**:
 
@@ -63,7 +56,7 @@ A highly aggressive Python-based port scanner designed to quickly and efficientl
 
 1. **Input**: The script prompts the user to enter the IP address of the target host.
 2. **Validation**: The IP address is validated to ensure it is in the correct format.
-3. **Aggressive Port Scanning**: The script concurrently scans a list of the 80 most common ports on the host using multiple threads to speed up the process.
+3. **Specific Port Scanning**: The script concurrently scans a list of the 80 most common ports on the host using multiple threads to speed up the process.
 4. **Service Detection**: If a port is open, the script uses Nmap to detect the service, version, product, and extra info running on the port.
 5. **HTTP Request**: For common web server ports (80, 443, 8080, 5426), the script sends an HTTP request and prints the response.
 6. **Output**: The script prints the status of each scanned port, including open ports and detected services.
