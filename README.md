@@ -29,14 +29,34 @@ A highly aggressive Python-based port scanner designed to quickly and efficientl
 
 2. **Install the required packages**:
 
+    ### Debian-based distributions (e.g., Ubuntu)
+
     ```bash
-    pip install termcolor nmap
+    sudo apt-get update
+    sudo apt-get install python3 python3-pip nmap
+    pip3 install termcolor
+    ```
+
+    ### Arch-based distributions (e.g., Manjaro)
+
+    ```bash
+    sudo pacman -Syu
+    sudo pacman -S python python-pip nmap
+    pip install termcolor
+    ```
+
+    ### Fedora-based distributions
+
+    ```bash
+    sudo dnf update
+    sudo dnf install python3 python3-pip nmap
+    pip3 install termcolor
     ```
 
 3. **Run the script and enter the IP address of the host you want to scan**:
 
     ```bash
-    python port-scanner.py
+    python3 port-scanner.py
     ```
 
 ## How It Works
@@ -57,6 +77,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 This project was inspired by the need to have a simple yet efficient and aggressive port scanner using Python.
 
 Special thanks to the developers of the Nmap and `termcolor` libraries.
+
 
 
 
