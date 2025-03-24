@@ -26,7 +26,7 @@ A Python-based port scanner designed for efficient scanning of all ports using t
 2. **Run the script**:
 
     ```bash
-    python3 port_scanner.py
+    python3 port-scanner.py
     ```
 
 ## How It Works
@@ -42,8 +42,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgments
 
 Special thanks to Python's `socket` and `threading` libraries for making port scanning straightforward and efficient.
-
-Special thanks to the developers of the Nmap and `termcolor` libraries.
-
-
-
